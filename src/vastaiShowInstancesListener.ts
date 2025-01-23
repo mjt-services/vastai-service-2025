@@ -1,12 +1,15 @@
+import { Asserts } from "@mjt-engine/assert";
 import type { ConnectionListener } from "@mjt-engine/message";
 import type {
   VastaiConnectionMap,
   VastAiInstance,
-  VastAiSearchResponse,
 } from "@mjt-services/vastai-common-2025";
 import { cmd } from "./common/cmd";
-import { Asserts } from "@mjt-engine/assert";
 import { getEnv } from "./getEnv";
+import { getVastApiKey } from "./getVastApiKey";
+
+// {'success': True, 'new_contract': 7835610}
+export type InstanceCreateResp = { success: boolean; new_contract: number };
 
 export const vastaiShowInstancesListener: ConnectionListener<
   VastaiConnectionMap,
@@ -18,7 +21,7 @@ export const vastaiShowInstancesListener: ConnectionListener<
     "show instances",
     "--raw",
     "--api-key",
-    Asserts.assertValue(env.VASTAI_API_KEY)
+    getVastApiKey()
   );
   return JSON.parse(Asserts.assertValue(respText)) as VastAiInstance[];
 };

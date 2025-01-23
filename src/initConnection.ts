@@ -6,6 +6,10 @@ import { assertValue } from "@mjt-engine/assert";
 import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
 import { getEnv } from "./getEnv";
 import { vastaiShowInstancesListener } from "./vastaiShowInstancesListener";
+import {
+  vastaiCreateInstanceListener,
+  vastaiDestroyInstanceListener,
+} from "./vastaiCreateInstanceListener";
 
 export const initConnection = async () => {
   const env = getEnv();
@@ -16,6 +20,8 @@ export const initConnection = async () => {
     subscribers: {
       "vastai.search": vastaiSearchListener,
       "vastai.show.instances": vastaiShowInstancesListener,
+      "vastai.create.instance": vastaiCreateInstanceListener,
+      "vastai.destroy.instance": vastaiDestroyInstanceListener,
     },
     options: { log: console.log },
     server: [url],
