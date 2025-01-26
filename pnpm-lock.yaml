@@ -20,9 +20,12 @@ importers:
       '@mjt-engine/parse':
         specifier: github:mjt-engine/parse
         version: https://codeload.github.com/mjt-engine/parse/tar.gz/0cfe4e6756c4a38311ad98f3a5a811834f2b1b80
+      '@mjt-services/tunnel-common-2025':
+        specifier: github:mjt-services/tunnel-common-2025
+        version: https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4
       '@mjt-services/vastai-common-2025':
         specifier: github:mjt-services/vastai-common-2025
-        version: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/1b806de3d8a540a2e1001260195bce0f4f46bd85
+        version: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/e0f4b8d25f958a68515b1bd7898688effd1482a0
     devDependencies:
       '@types/node':
         specifier: ^22.10.7
@@ -208,9 +211,13 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/parse/tar.gz/0cfe4e6756c4a38311ad98f3a5a811834f2b1b80}
     version: 2025.1.19-1222
 
-  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/1b806de3d8a540a2e1001260195bce0f4f46bd85':
-    resolution: {tarball: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/1b806de3d8a540a2e1001260195bce0f4f46bd85}
-    version: 2025.1.23-1133
+  '@mjt-services/tunnel-common-2025@https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4':
+    resolution: {tarball: https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4}
+    version: 2025.1.22-1152
+
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/e0f4b8d25f958a68515b1bd7898688effd1482a0':
+    resolution: {tarball: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/e0f4b8d25f958a68515b1bd7898688effd1482a0}
+    version: 2025.1.24-1031
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -548,7 +555,11 @@ snapshots:
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 
-  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/1b806de3d8a540a2e1001260195bce0f4f46bd85':
+  '@mjt-services/tunnel-common-2025@https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4':
+    dependencies:
+      '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
+
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/e0f4b8d25f958a68515b1bd7898688effd1482a0':
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 
