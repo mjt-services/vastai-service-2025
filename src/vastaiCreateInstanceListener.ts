@@ -10,8 +10,9 @@ export const vastaiCreateInstanceListener: ConnectionListener<
   "vastai.create.instance"
 > = async (props) => {
   const {
+    label,
     image,
-    machineId,
+    contractId,
     diskGb = 10,
     env: InstanceEnv = {},
     exposedPortMappings = {},
@@ -26,14 +27,16 @@ export const vastaiCreateInstanceListener: ConnectionListener<
     .join(" ");
   const respText = await cmd("vastai", { verbose: true })(
     "create instance",
-    machineId.toString(),
+    contractId.toString(),
     "--image",
     image,
     "--ssh",
     "--disk",
     diskGb.toString(),
+    "--label",
+    label ?? "unknown",
     "--env",
-    "'" + [environmentString, portMappingString].join(" ") + "'",
+    "'" + [environmentString, portMappingString].join(" ").trim() + "'",
     "--raw",
     "--api-key",
     getVastApiKey()
