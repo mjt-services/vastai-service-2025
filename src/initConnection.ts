@@ -10,6 +10,7 @@ import { vastaiCreateInstanceListener } from "./vastaiCreateInstanceListener";
 import { vastaiDestroyInstanceListener } from "./vastaiDestroyInstanceListener";
 import { vastaiSearchListener } from "./vastaiSearchListener";
 import { vastaiShowInstancesListener } from "./vastaiShowInstancesListener";
+import { vastaiLabelInstanceListener } from "./vastaiLabelInstanceListener";
 
 export const initConnection = async () => {
   const env = getEnv();
@@ -26,6 +27,7 @@ export const initConnection = async () => {
       "vastai.create.instance": vastaiCreateInstanceListener,
       "vastai.destroy.instance": vastaiDestroyInstanceListener,
       "vastai.connect.instance": vastaiConnectInstanceListener,
+      "vastai.label.instance": vastaiLabelInstanceListener,
     },
     options: { log: console.log },
     server: [url],
