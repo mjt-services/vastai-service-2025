@@ -25,7 +25,7 @@ importers:
         version: https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4
       '@mjt-services/vastai-common-2025':
         specifier: github:mjt-services/vastai-common-2025
-        version: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/5b87f40760e0b5fad2a08b400ec5868af201e49e
+        version: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/90af5b7290d39fe3855ecd71e8a31422dbc6a637
     devDependencies:
       '@types/node':
         specifier: ^22.10.7
@@ -215,9 +215,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-services/tunnel-common-2025/tar.gz/7835f68eb4eed9d8b8d9dea670ee058ef1c4dbf4}
     version: 2025.1.22-1152
 
-  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/5b87f40760e0b5fad2a08b400ec5868af201e49e':
-    resolution: {tarball: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/5b87f40760e0b5fad2a08b400ec5868af201e49e}
-    version: 2025.1.29-1036
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/90af5b7290d39fe3855ecd71e8a31422dbc6a637':
+    resolution: {tarball: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/90af5b7290d39fe3855ecd71e8a31422dbc6a637}
+    version: 2025.2.2-845
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -559,7 +559,7 @@ snapshots:
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 
-  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/5b87f40760e0b5fad2a08b400ec5868af201e49e':
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/90af5b7290d39fe3855ecd71e8a31422dbc6a637':
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 

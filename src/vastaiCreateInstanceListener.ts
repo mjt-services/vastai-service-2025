@@ -16,6 +16,7 @@ export const vastaiCreateInstanceListener: ConnectionListener<
     diskGb = 10,
     env: InstanceEnv = {},
     exposedPortMappings = {},
+    onStartCmd,
   } = props.detail.body;
 
   // vastai create instance 13293135 --image 'onerahmet/openai-whisper-asr-webservice:latest-gpu' --ssh --disk 10 --env '-p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper'
@@ -37,6 +38,8 @@ export const vastaiCreateInstanceListener: ConnectionListener<
     label ?? "unknown",
     "--env",
     "'" + [environmentString, portMappingString].join(" ").trim() + "'",
+    "--onstart-cmd",
+    onStartCmd ?? "",
     "--raw",
     "--api-key",
     getVastApiKey()
