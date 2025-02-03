@@ -17,7 +17,7 @@ export const vastaiShowInstancesListener: ConnectionListener<
 > = async (props) => {
   const {} = props.detail.body;
   const env = getEnv();
-  const respText = await cmd("vastai", { verbose: true })(
+  const respText = await cmd("vastai", { verbose: false})(
     "show instances",
     "--raw",
     "--api-key",
