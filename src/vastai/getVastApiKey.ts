@@ -1,6 +1,5 @@
 import { Asserts } from "@mjt-engine/assert";
-import { getEnv } from "./getEnv";
-
+import { getEnv } from "../getEnv";
 
 export const getVastApiKey = () => {
   const env = getEnv();
