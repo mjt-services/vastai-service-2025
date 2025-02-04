@@ -5,12 +5,12 @@ import { assertValue } from "@mjt-engine/assert";
 import type { TunnelConnectionMap } from "@mjt-services/tunnel-common-2025";
 import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
 import { getEnv } from "./getEnv";
-import { vastaiConnectInstanceListener } from "./vastaiConnectInstanceListener";
-import { vastaiCreateInstanceListener } from "./vastaiCreateInstanceListener";
-import { vastaiDestroyInstanceListener } from "./vastaiDestroyInstanceListener";
-import { vastaiSearchListener } from "./vastaiSearchListener";
-import { vastaiShowInstancesListener } from "./vastaiShowInstancesListener";
-import { vastaiLabelInstanceListener } from "./vastaiLabelInstanceListener";
+import { vastaiConnectInstanceListener } from "./listener/vastaiConnectInstanceListener";
+import { vastaiCreateInstanceListener } from "./listener/vastaiCreateInstanceListener";
+import { vastaiDestroyInstanceListener } from "./listener/vastaiDestroyInstanceListener";
+import { vastaiSearchListener } from "./listener/vastaiSearchListener";
+import { vastaiShowInstancesListener } from "./listener/vastaiShowInstancesListener";
+import { vastaiLabelInstanceListener } from "./listener/vastaiLabelInstanceListener";
 
 export const initConnection = async () => {
   const env = getEnv();

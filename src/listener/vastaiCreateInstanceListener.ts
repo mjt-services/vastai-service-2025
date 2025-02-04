@@ -1,9 +1,9 @@
 import { Asserts } from "@mjt-engine/assert";
 import type { ConnectionListener } from "@mjt-engine/message";
 import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
-import { cmd } from "./common/cmd";
-import { getVastApiKey } from "./getVastApiKey";
+import { cmd } from "../common/cmd";
 import type { InstanceCreateResp } from "./vastaiShowInstancesListener";
+import { getVastApiKey } from "../vastai/getVastApiKey";
 
 export const vastaiCreateInstanceListener: ConnectionListener<
   VastaiConnectionMap,
@@ -16,7 +16,7 @@ export const vastaiCreateInstanceListener: ConnectionListener<
     diskGb = 10,
     env: InstanceEnv = {},
     exposedPortMappings = {},
-    onStartCmd,
+    onStartCmd = "",
   } = props.detail.body;
 
   // vastai create instance 13293135 --image 'onerahmet/openai-whisper-asr-webservice:latest-gpu' --ssh --disk 10 --env '-p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper'
@@ -39,7 +39,7 @@ export const vastaiCreateInstanceListener: ConnectionListener<
     "--env",
     "'" + [environmentString, portMappingString].join(" ").trim() + "'",
     "--onstart-cmd",
-    onStartCmd ?? "",
+    "'" + onStartCmd + "'",
     "--raw",
     "--api-key",
     getVastApiKey()

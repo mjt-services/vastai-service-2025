@@ -1,6 +1,6 @@
 import { Asserts } from "@mjt-engine/assert";
 import type { VastAiInstance } from "@mjt-services/vastai-common-2025";
-import { cmd } from "./common/cmd";
+import { cmd } from "../common/cmd";
 import { getVastApiKey } from "./getVastApiKey";
 
 

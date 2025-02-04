@@ -4,9 +4,9 @@ import type {
   VastaiConnectionMap,
   VastAiInstance,
 } from "@mjt-services/vastai-common-2025";
-import { cmd } from "./common/cmd";
-import { getEnv } from "./getEnv";
-import { getVastApiKey } from "./getVastApiKey";
+import { cmd } from "../common/cmd";
+import { getEnv } from "../getEnv";
+import { getVastApiKey } from "../vastai/getVastApiKey";
 
 // {'success': True, 'new_contract': 7835610}
 export type InstanceCreateResp = { success: boolean; new_contract: number };

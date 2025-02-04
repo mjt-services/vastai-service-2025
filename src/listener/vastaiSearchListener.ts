@@ -3,7 +3,7 @@ import type {
   VastaiConnectionMap,
   VastAiSearchResponse,
 } from "@mjt-services/vastai-common-2025";
-import { cmd } from "./common/cmd";
+import { cmd } from "../common/cmd";
 import { Asserts } from "@mjt-engine/assert";
 
 export const vastaiSearchListener: ConnectionListener<

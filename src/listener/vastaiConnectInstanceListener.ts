@@ -1,8 +1,8 @@
 import { Asserts } from "@mjt-engine/assert";
 import type { ConnectionListener } from "@mjt-engine/message";
 import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
-import { getConnection } from "./getConnection";
-import { getVastAiInstance } from "./getVastAiInstance";
+import { getConnection } from "../getConnection";
+import { getVastAiInstance } from "../vastai/getVastAiInstance";
 
 export const vastaiConnectInstanceListener: ConnectionListener<
   VastaiConnectionMap,

@@ -1,11 +1,11 @@
 import type { ConnectionListener } from "@mjt-engine/message";
 import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
-import { cmd } from "./common/cmd";
-import { getVastApiKey } from "./getVastApiKey";
-
+import { cmd } from "../common/cmd";
+import { getVastApiKey } from "../vastai/getVastApiKey";
 
 export const vastaiLabelInstanceListener: ConnectionListener<
-  VastaiConnectionMap, "vastai.label.instance"
+  VastaiConnectionMap,
+  "vastai.label.instance"
 > = async (props) => {
   const { contractId, label } = props.detail.body;
 
