@@ -11,5 +11,5 @@ It relies upon the [Vastai CLI 2025](https://github.com/mjt-services/vastai-cli-
 
 ## Documentation
 
-For detailed documentation, please visit the [project documentation](https://mjt-services.github.io/textgen-service-2025/).
+For detailed documentation, please visit the [project documentation](https://mjt-services.github.io/vastai-service-2025/).
 
